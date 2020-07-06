@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#31426d"
+    tools:context=".activity.SignUpActivity">
+
+    <include layout="@layout/view_back_tool_bar"/>
+
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="261dp"
+        android:layout_height="75dp"
+        android:src="@drawable/ic_login_stackexchange"
+        android:layout_marginTop="10dp">
+
+    </ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="expert answers to your questions"
+        android:textColor="#6b7da7"
+        android:layout_gravity="center">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/actSignup_btnGoogle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/ic_btn_google"
+        android:paddingLeft="10dp"
+        android:text="Sign in with Google"
+        android:textAllCaps="false">
+
+    </Button>
+
+    <Button
+        android:id="@+id/actSignup_btnFacebook"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/ic_btn_facebook"
+        android:text="Sign up using Facebook"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:paddingEnd="100dp"
+        android:paddingRight="100dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/actSignup_btnStackexchange"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/ic_btn_stackexchange"
+        android:text="Sign up using Stack Exchange"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:paddingEnd="60dp"
+        android:paddingRight="60dp">
+
+    </Button>
+
+</LinearLayout>
