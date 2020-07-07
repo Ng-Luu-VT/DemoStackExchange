@@ -10,71 +10,119 @@
 
     <include layout="@layout/view_back_tool_bar"/>
 
-    <ImageView
-        android:layout_gravity="center"
-        android:layout_width="261dp"
-        android:layout_height="75dp"
-        android:src="@drawable/ic_login_stackexchange"
-        android:layout_marginTop="10dp">
-
-    </ImageView>
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="expert answers to your questions"
-        android:textColor="#6b7da7"
-        android:layout_gravity="center">
+        android:orientation="vertical"
+        >
 
-    </TextView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="60dp"
+            android:src="@drawable/ic_login_stackexchange">
 
-    <Button
-        android:id="@+id/actSignup_btnGoogle"
-        android:layout_width="200dp"
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="expert answers to your questions"
+            android:textColor="#6b7da7"
+            android:layout_gravity="center">
+
+        </TextView>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:background="@android:color/white"
-        android:drawableLeft="@drawable/ic_btn_google"
-        android:paddingLeft="10dp"
-        android:text="Sign in with Google"
-        android:textAllCaps="false">
+        android:background="@drawable/shape_rectangle_mini"
+        android:orientation="horizontal"
+        android:id="@+id/actSignup_linearGoogle"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_btn_google">
 
-    </Button>
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in with Google"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:paddingStart="20dp"
+            >
 
-    <Button
-        android:id="@+id/actSignup_btnFacebook"
-        android:layout_width="340dp"
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:background="@android:color/white"
-        android:drawableLeft="@drawable/ic_btn_facebook"
-        android:text="Sign up using Facebook"
-        android:paddingStart="10dp"
-        android:paddingLeft="10dp"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        android:paddingEnd="100dp"
-        android:paddingRight="100dp">
+        android:background="@drawable/shape_rectangle_mini"
+        android:orientation="horizontal"
+        android:id="@+id/actSignup_linearFacebook"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_btn_facebook">
 
-    </Button>
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up using Facebook"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:paddingStart="20dp"
+            >
 
-    <Button
-        android:id="@+id/actSignup_btnStackexchange"
-        android:layout_width="340dp"
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:background="@android:color/white"
-        android:drawableLeft="@drawable/ic_btn_stackexchange"
-        android:text="Sign up using Stack Exchange"
-        android:paddingStart="10dp"
-        android:paddingLeft="10dp"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        android:paddingEnd="60dp"
-        android:paddingRight="60dp">
+        android:background="@drawable/shape_rectangle_mini"
+        android:orientation="horizontal"
+        android:id="@+id/actSignup_linearStack"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_btn_stackexchange">
 
-    </Button>
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up using Stack EXchange"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:paddingStart="20dp"
+            >
 
+        </TextView>
+    </LinearLayout>
 </LinearLayout>

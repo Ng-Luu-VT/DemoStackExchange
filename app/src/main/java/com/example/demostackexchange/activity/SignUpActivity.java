@@ -7,14 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.demostackexchange.R;
 
 public class SignUpActivity extends AppCompatActivity {
-    private Button btnGoogle;
-    private Button btnFacebook;
-    private Button btnStack;
+    private LinearLayout linearGoogle;
+    private LinearLayout linearFacebook;
+    private LinearLayout linearStack;
     private ImageView ivBack;
     private TextView tvTitle;
 
@@ -27,9 +28,9 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void init() {
-        btnFacebook = findViewById(R.id.actSignup_btnFacebook);
-        btnGoogle = findViewById(R.id.actSignup_btnGoogle);
-        btnStack = findViewById(R.id.actSignup_btnStackexchange);
+        linearFacebook = findViewById(R.id.actSignup_linearFacebook);
+        linearGoogle = findViewById(R.id.actSignup_linearGoogle);
+        linearStack = findViewById(R.id.actSignup_linearStack);
         ivBack = findViewById(R.id.viewBackToolBar_ivBack);
         tvTitle = findViewById(R.id.viewBackToolBar_tvTitle);
         Intent intent = getIntent();
