@@ -12,8 +12,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
         >
         <ImageView
             android:layout_gravity="center"
@@ -28,21 +28,24 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingLeft="20dp"
             android:paddingTop="60dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="10dp"
+            android:weightSum="2"
             >
 
             <Button
+                android:layout_weight="1"
                 android:id="@+id/actMain_btnSingup"
-                android:layout_width="170dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#496fb0"
                 android:text="Sing Up"
@@ -51,14 +54,14 @@
             </Button>
 
             <Button
+                android:layout_weight="1"
+                android:layout_marginStart="30dp"
                 android:id="@+id/actMain_btnLogin"
-                android:layout_width="170dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:text="Log In"
-                android:textColor="#FFFFFF"
                 android:background="#496fb0"
-            >
+                android:text="Log In"
+                android:textColor="#FFFFFF">
 
             </Button>
         </LinearLayout>
@@ -66,19 +69,22 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp">
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/actMain_tvStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start using without an account..."
+                android:textColor="#a5b3cb"
+                android:textSize="14sp">
+
+            </TextView>
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/actMain_tvStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Start using without an account..."
-            android:textColor="#a5b3cb"
-            android:textSize="14sp">
 
-        </TextView>
     </LinearLayout>
 </LinearLayout>
