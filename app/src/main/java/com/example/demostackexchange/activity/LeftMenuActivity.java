@@ -14,6 +14,6 @@ public class LeftMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_left_menu);
 
-
+//aaaaa
     }
 }
