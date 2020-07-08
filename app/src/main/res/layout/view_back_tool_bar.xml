@@ -18,7 +18,7 @@
         android:id="@+id/viewBackToolBar_tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:text="Title"
         android:textColor="@android:color/white"
         android:textSize="16sp"

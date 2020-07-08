@@ -57,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        tvStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LeftMenuActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void init() {
