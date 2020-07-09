@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#31426d"
-    tools:context=".activity.LoginActivity">
+    tools:context=".activity.SignUpActivity">
 
     <include layout="@layout/view_back_tool_bar"/>
 
@@ -37,6 +37,8 @@
         </TextView>
     </LinearLayout>
 
+
+
     <LinearLayout
         android:layout_marginTop="60dp"
         android:layout_marginStart="80dp"
@@ -46,7 +48,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/shape_rectangle_mini"
         android:orientation="horizontal"
-        android:id="@+id/actLogin_linearGoogle"
+        android:id="@+id/actSignup_linearGoogle"
         >
         <ImageView
             android:layout_width="wrap_content"
@@ -66,18 +68,6 @@
         </TextView>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingTop="10dp"
-        android:text="or"
-        android:textStyle="italic"
-        android:textColor="#7081a4"
-        android:textSize="20sp">
-
-    </TextView>
-
     <LinearLayout
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
@@ -87,7 +77,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/shape_rectangle_mini"
         android:orientation="horizontal"
-        android:id="@+id/actLogin_linearFacebook"
+        android:id="@+id/actSignup_linearFacebook"
         >
         <ImageView
             android:layout_width="wrap_content"
@@ -102,7 +92,7 @@
             android:textSize="16sp"
             android:layout_gravity="center"
             android:paddingStart="20dp"
-            tools:ignore="RtlSymmetry">
+            >
 
         </TextView>
     </LinearLayout>
@@ -111,12 +101,12 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:padding="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_rectangle_mini"
         android:orientation="horizontal"
-        android:id="@+id/actLogin_linearStack"
+        android:id="@+id/actSignup_linearStack"
         >
         <ImageView
             android:layout_width="wrap_content"
@@ -127,36 +117,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log in using Stack Exchange"
-            android:textSize="16sp"
-            android:layout_gravity="center"
-            android:paddingStart="20dp"
-            tools:ignore="RtlSymmetry">
-
-        </TextView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape_rectangle_mini"
-        android:orientation="horizontal"
-        android:id="@+id/actLogin_linearOpenID"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_btn_openid">
-
-        </ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Log in using another OpenID"
+            android:text="Sign up using Stack EXchange"
             android:textSize="16sp"
             android:layout_gravity="center"
             android:paddingStart="20dp"

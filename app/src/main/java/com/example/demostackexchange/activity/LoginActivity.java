@@ -7,15 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.demostackexchange.R;
 
 public class LoginActivity extends AppCompatActivity {
-    private Button btnGoogle;
-    private Button btnFacebook;
-    private Button btnStack;
-    private Button btnOpenID;
+    private LinearLayout lỉnarGoogle;
+    private LinearLayout lỉnarFacebook;
+    private LinearLayout lỉnarStack;
+    private LinearLayout lỉnarOpenID;
     private TextView tvTitle;
     private ImageView ivBack;
 
@@ -39,10 +40,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void init() {
-        btnGoogle = findViewById(R.id.actLogin_btnGoogle);
-        btnFacebook = findViewById(R.id.actLogin_btnFacebook);
-        btnStack = findViewById(R.id.actLogin_btnStackexchange);
-        btnOpenID = findViewById(R.id.actLogin_btnOpenid);
+        lỉnarGoogle = findViewById(R.id.actLogin_linearGoogle);
+        lỉnarFacebook = findViewById(R.id.actLogin_linearFacebook);
+        lỉnarStack = findViewById(R.id.actLogin_linearStack);
+        lỉnarOpenID = findViewById(R.id.actLogin_linearOpenID);
         tvTitle = findViewById(R.id.viewBackToolBar_tvTitle);
         ivBack = findViewById(R.id.viewBackToolBar_ivBack);
         Intent intent = getIntent();
