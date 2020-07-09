@@ -32,12 +32,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+                intent.putExtra("Sign", btnSignup.getText());
+                startActivity(intent);
+            }
+        });
+        tvStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FeedMainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void init() {
         btnLogin = findViewById(R.id.actMain_btnLogin);
-        btnSignup = findViewById(R.id.actMain_btnSingup);
-        tvStart = findViewById(R.id.actMain_tvStart);
+         btnSignup = findViewById(R.id.actMain_btnSingup);
+         tvStart = findViewById(R.id.actMain_tvStart);
 
     }
 }
