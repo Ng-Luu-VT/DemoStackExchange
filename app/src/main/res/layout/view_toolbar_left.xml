@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="#334b77"
+    android:gravity="center|start"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+        android:id="@+id/viewToolbarLeft_ivHamburger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:src="@drawable/ic_hamburger" />
+
+</LinearLayout>
