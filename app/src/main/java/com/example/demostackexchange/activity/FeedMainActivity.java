@@ -5,6 +5,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -21,7 +22,7 @@ import com.example.demostackexchange.item.ItemRVMainMenu;
 
 import java.util.ArrayList;
 
-public class FeedMainActivity extends AppCompatActivity {
+public class FeedMainActivity extends AppCompatActivity implements View.OnClickListener, ItemRVLeftMenuInterface, ItemRVMainMenuInterface {
     private RecyclerView rvLeft;
     private RecyclerView rvMain;
     private LeftMenuRVAdapter mLeftMenuRVAdapter;
@@ -43,24 +44,29 @@ public class FeedMainActivity extends AppCompatActivity {
         rvLeft = findViewById(R.id.actFeedMain_rvLeft);
         ivHamburgerMain = findViewById(R.id.viewToolbar_ivHamburger);
         ivHamburgerLeft = findViewById(R.id.viewToolbarLeft_ivHamburger);
-        ivHamburgerMain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dlFeed.openDrawer(Gravity.LEFT);
-            }
-        });
-        ivHamburgerLeft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dlFeed.closeDrawer(v);
-            }
-        });
+        ivHamburgerMain.setOnClickListener(this);
+        ivHamburgerLeft.setOnClickListener(this);
+
         mLeftMenuRVAdapter = new LeftMenuRVAdapter(genDataLeft());
         mMainMenuRVAdapter = new MainMenuRVAdapter(genDataMain());
         rvLeft.setLayoutManager(new LinearLayoutManager(this));
         rvMain.setLayoutManager(new LinearLayoutManager(this));
         rvLeft.setAdapter(mLeftMenuRVAdapter);
         rvMain.setAdapter(mMainMenuRVAdapter);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.viewToolbar_ivHamburger:
+                dlFeed.openDrawer(Gravity.LEFT);
+                break;
+            case  R.id.viewToolbarLeft_ivHamburger:
+                dlFeed.closeDrawer(Gravity.LEFT);
+                break;
+            default:
+                break;
+        }
     }
 
     private ArrayList<ItemRVMainMenu> genDataMain() {
@@ -86,8 +92,13 @@ public class FeedMainActivity extends AppCompatActivity {
     }
 
     private void bindEvent() {
-        mLeftMenuRVAdapter.setmItemToolbarInterface((ItemRVLeftMenuInterface) this);
-        mMainMenuRVAdapter.setItemRVMainMenuInterface((ItemRVMainMenuInterface) this);
+        mLeftMenuRVAdapter.setmItemToolbarInterface(this);
+        mMainMenuRVAdapter.setItemRVMainMenuInterface(this);
     }
 
+
+    @Override
+    public void itemClicked(int position) {
+
+    }
 }
