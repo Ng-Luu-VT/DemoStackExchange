@@ -11,30 +11,30 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.demostackexchange.R;
-import com.example.demostackexchange.interfaces.ItemRVLeftMenuInterface;
+import com.example.demostackexchange.interfaces.ItemRVMainMenuInterface;
 import com.example.demostackexchange.item.ItemRVLeftMenu;
+import com.example.demostackexchange.item.ItemRVMainMenu;
 
 import java.util.ArrayList;
 
-public class LeftMenuRVAdapter extends RecyclerView.Adapter<LeftMenuRVAdapter.NewViewHolder> {
+public class MainMenuRVAdapter extends RecyclerView.Adapter<MainMenuRVAdapter.NewViewHolder> {
+    private ArrayList<ItemRVMainMenu> mData;
+    private ItemRVMainMenuInterface mItemRVMainMenuInterface;
 
-    private ArrayList<ItemRVLeftMenu> mData;
-    private ItemRVLeftMenuInterface mItemRVLeftMenuInterface;
-
-    public LeftMenuRVAdapter(ArrayList<ItemRVLeftMenu> mData) {
+    public MainMenuRVAdapter(ArrayList<ItemRVMainMenu> mData) {
         this.mData = mData;
     }
 
     @NonNull
     @Override
     public NewViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recyclerview_leftmenu,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recyclerview_mainmenu,parent,false);
         return new NewViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LeftMenuRVAdapter.NewViewHolder holder, int position) {
-        ItemRVLeftMenu item = mData.get(position);
+    public void onBindViewHolder(@NonNull NewViewHolder holder, int position) {
+        ItemRVMainMenu item = mData.get(position);
         holder.binData(item);
     }
 
@@ -47,31 +47,28 @@ public class LeftMenuRVAdapter extends RecyclerView.Adapter<LeftMenuRVAdapter.Ne
         LinearLayout linearItem;
         ImageView ivItem;
         TextView tvItem;
-
         public NewViewHolder(@NonNull View itemView) {
             super(itemView);
-            linearItem = itemView.findViewById(R.id.itemToolbar_linearItem);
+            linearItem = itemView.findViewById(R.id.itemMainMenu_linearItem);
             ivItem = itemView.findViewById(R.id.itemToolbar_ivItem);
             tvItem = itemView.findViewById(R.id.itemToolbar_tvItem);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (mItemRVLeftMenuInterface != null) mItemRVLeftMenuInterface.itemClicked(getAdapterPosition());
+                    if (mItemRVMainMenuInterface != null) mItemRVMainMenuInterface.itemClicked(getAdapterPosition());
                 }
             });
         }
-        void binData(ItemRVLeftMenu itemRVLeftMenu) {
-            ivItem.setImageResource(itemRVLeftMenu.getIvItemToolbar());
-            tvItem.setText(itemRVLeftMenu.getTvItemToolbar());
+        void binData(ItemRVMainMenu itemRVMainMenu) {
+            ivItem.setImageResource(itemRVMainMenu.getIvItemMainMenu());
+            tvItem.setText(itemRVMainMenu.getTvItemMainMenu());
         }
     }
-
-    public void setmItemToolbarInterface(ItemRVLeftMenuInterface mItemRVLeftMenuInterface) {
-        this.mItemRVLeftMenuInterface = mItemRVLeftMenuInterface;
+    public void setItemRVMainMenuInterface(ItemRVMainMenuInterface mItemRVMainMenuInterface) {
+        this.mItemRVMainMenuInterface = mItemRVMainMenuInterface;
     }
-
-    public ArrayList<ItemRVLeftMenu> getData() {
+    public ArrayList<ItemRVMainMenu> getData() {
         return mData;
     }
 }
