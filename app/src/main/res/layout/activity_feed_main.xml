@@ -21,20 +21,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/actFeedMain_rvMain"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:text="aaaaaaaaaa"
-            android:textSize="30sp"
-            android:layout_margin="10dp"
-            android:id="@+id/actFeedMain_tvMainTest">
-
-        </TextView>
-
-
+            android:orientation="vertical"/>
 
     </LinearLayout>
 
@@ -46,22 +34,6 @@
         android:background="@color/cardview_light_background"
         android:orientation="vertical"
         >
-        <include layout="@layout/view_toolbar_left"
-            android:id="@+id/actFeedMain_tbLeft"
-            >
-
-        </include>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:text="aaaaaaaaaa"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
-            android:id="@+id/actFeedMain_tvLeftTest">
-
-        </TextView>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/actFeedMain_rvLeft"
             android:layout_width="match_parent"

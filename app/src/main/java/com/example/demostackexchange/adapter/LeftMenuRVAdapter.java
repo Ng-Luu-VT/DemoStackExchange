@@ -44,13 +44,13 @@ public class LeftMenuRVAdapter extends RecyclerView.Adapter<LeftMenuRVAdapter.Ne
     }
 
     public class NewViewHolder extends RecyclerView.ViewHolder {
-        LinearLayout linearItem;
+        //LinearLayout linearItem;
         ImageView ivItem;
         TextView tvItem;
 
         public NewViewHolder(@NonNull View itemView) {
             super(itemView);
-            linearItem = itemView.findViewById(R.id.itemToolbar_linearItem);
+            //linearItem = itemView.findViewById(R.id.itemToolbar_linearItem);
             ivItem = itemView.findViewById(R.id.itemToolbar_ivItem);
             tvItem = itemView.findViewById(R.id.itemToolbar_tvItem);
 
@@ -67,7 +67,7 @@ public class LeftMenuRVAdapter extends RecyclerView.Adapter<LeftMenuRVAdapter.Ne
         }
     }
 
-    public void setmItemToolbarInterface(ItemRVLeftMenuInterface mItemRVLeftMenuInterface) {
+    public void setItemToolbarInterface(ItemRVLeftMenuInterface mItemRVLeftMenuInterface) {
         this.mItemRVLeftMenuInterface = mItemRVLeftMenuInterface;
     }
 

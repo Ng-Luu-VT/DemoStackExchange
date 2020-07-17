@@ -43,14 +43,13 @@ public class FeedMainActivity extends AppCompatActivity implements View.OnClickL
         rvMain = findViewById(R.id.actFeedMain_rvMain);
         rvLeft = findViewById(R.id.actFeedMain_rvLeft);
         ivHamburgerMain = findViewById(R.id.viewToolbar_ivHamburger);
-        ivHamburgerLeft = findViewById(R.id.viewToolbarLeft_ivHamburger);
         ivHamburgerMain.setOnClickListener(this);
-        ivHamburgerLeft.setOnClickListener(this);
 
         mLeftMenuRVAdapter = new LeftMenuRVAdapter(genDataLeft());
         mMainMenuRVAdapter = new MainMenuRVAdapter(genDataMain());
-        rvLeft.setLayoutManager(new LinearLayoutManager(this));
+        rvLeft.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         rvMain.setLayoutManager(new LinearLayoutManager(this));
+        rvMain.setHasFixedSize(true);
         rvLeft.setAdapter(mLeftMenuRVAdapter);
         rvMain.setAdapter(mMainMenuRVAdapter);
     }
@@ -71,8 +70,9 @@ public class FeedMainActivity extends AppCompatActivity implements View.OnClickL
 
     private ArrayList<ItemRVMainMenu> genDataMain() {
         ArrayList<ItemRVMainMenu> listItem = new ArrayList<>();
-        ItemRVMainMenu item = new ItemRVMainMenu();
-        for (int i = 0; i <=10; i++){
+        for (int i = 0; i < 10; i++){
+
+            ItemRVMainMenu item = new ItemRVMainMenu();
             item.setIvItemMainMenu(R.drawable.ic_btn_stackexchange);
             item.setTvItemMainMenu("Title "+ (i+1));
             listItem.add(item);
@@ -82,8 +82,8 @@ public class FeedMainActivity extends AppCompatActivity implements View.OnClickL
 
     private ArrayList<ItemRVLeftMenu> genDataLeft() {
         ArrayList<ItemRVLeftMenu> listItem = new ArrayList<>();
-        ItemRVLeftMenu item = new ItemRVLeftMenu();
-        for (int i = 0; i <=10; i++){
+        for (int i = 0; i < 10; i++){
+            ItemRVLeftMenu item = new ItemRVLeftMenu();
             item.setIvItemToolbar(R.drawable.ic_btn_stackexchange);
             item.setTvItemToolbar("Title "+ (i+1));
             listItem.add(item);
@@ -92,13 +92,14 @@ public class FeedMainActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void bindEvent() {
-        mLeftMenuRVAdapter.setmItemToolbarInterface(this);
+        mLeftMenuRVAdapter.setItemToolbarInterface(this);
         mMainMenuRVAdapter.setItemRVMainMenuInterface(this);
     }
 
 
     @Override
     public void itemClicked(int position) {
-
+        Intent intent = new Intent(this, SignUpActivity.class);
+        startActivity(intent);
     }
 }

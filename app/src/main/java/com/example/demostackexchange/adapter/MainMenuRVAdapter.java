@@ -44,14 +44,14 @@ public class MainMenuRVAdapter extends RecyclerView.Adapter<MainMenuRVAdapter.Ne
     }
 
     public class NewViewHolder extends RecyclerView.ViewHolder {
-        LinearLayout linearItem;
+        //LinearLayout linearItem;
         ImageView ivItem;
         TextView tvItem;
         public NewViewHolder(@NonNull View itemView) {
             super(itemView);
-            linearItem = itemView.findViewById(R.id.itemMainMenu_linearItem);
-            ivItem = itemView.findViewById(R.id.itemToolbar_ivItem);
-            tvItem = itemView.findViewById(R.id.itemToolbar_tvItem);
+            //linearItem = itemView.findViewById(R.id.itemMainMenu_linearItem);
+            ivItem = itemView.findViewById(R.id.itemMainMenu_ivItem);
+            tvItem = itemView.findViewById(R.id.itemMainMenu_tvItem);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

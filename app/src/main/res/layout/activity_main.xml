@@ -10,10 +10,11 @@
     android:weightSum= "9"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="8"
+        android:layout_gravity="center"
         >
         <ImageView
             android:layout_gravity="center"
@@ -24,9 +25,9 @@
             android:layout_marginTop="30dp">
         </ImageView>
 
-    </LinearLayout>
+    </FrameLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -45,7 +46,7 @@
             <Button
                 android:layout_weight="1"
                 android:id="@+id/actMain_btnSingup"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="#496fb0"
                 android:text="Sing Up"
@@ -57,7 +58,7 @@
                 android:layout_weight="1"
                 android:layout_marginStart="30dp"
                 android:id="@+id/actMain_btnLogin"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="#496fb0"
                 android:text="Log In"
@@ -71,6 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:gravity="center"
+            android:layout_gravity="bottom"
             >
 
             <TextView
@@ -86,5 +88,5 @@
         </LinearLayout>
 
 
-    </LinearLayout>
+    </FrameLayout>
 </LinearLayout>
