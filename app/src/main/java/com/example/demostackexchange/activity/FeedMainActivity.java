@@ -22,7 +22,7 @@ import com.example.demostackexchange.item.ItemRVMainMenu;
 
 import java.util.ArrayList;
 
-public class FeedMainActivity extends AppCompatActivity implements View.OnClickListener, ItemRVLeftMenuInterface, ItemRVMainMenuInterface {
+public class FeedMainActivity extends AppCompatActivity implements ItemRVLeftMenuInterface, ItemRVMainMenuInterface {
     private RecyclerView rvLeft;
     private RecyclerView rvMain;
     private LeftMenuRVAdapter mLeftMenuRVAdapter;
@@ -43,7 +43,12 @@ public class FeedMainActivity extends AppCompatActivity implements View.OnClickL
         rvMain = findViewById(R.id.actFeedMain_rvMain);
         rvLeft = findViewById(R.id.actFeedMain_rvLeft);
         ivHamburgerMain = findViewById(R.id.viewToolbar_ivHamburger);
-        ivHamburgerMain.setOnClickListener(this);
+        ivHamburgerMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dlFeed.openDrawer(Gravity.LEFT);
+            }
+        });
 
         mLeftMenuRVAdapter = new LeftMenuRVAdapter(genDataLeft());
         mMainMenuRVAdapter = new MainMenuRVAdapter(genDataMain());
@@ -54,23 +59,10 @@ public class FeedMainActivity extends AppCompatActivity implements View.OnClickL
         rvMain.setAdapter(mMainMenuRVAdapter);
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.viewToolbar_ivHamburger:
-                dlFeed.openDrawer(Gravity.LEFT);
-                break;
-            case  R.id.viewToolbarLeft_ivHamburger:
-                dlFeed.closeDrawer(Gravity.LEFT);
-                break;
-            default:
-                break;
-        }
-    }
 
     private ArrayList<ItemRVMainMenu> genDataMain() {
         ArrayList<ItemRVMainMenu> listItem = new ArrayList<>();
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 7; i++){
 
             ItemRVMainMenu item = new ItemRVMainMenu();
             item.setIvItemMainMenu(R.drawable.ic_btn_stackexchange);
@@ -82,7 +74,7 @@ public class FeedMainActivity extends AppCompatActivity implements View.OnClickL
 
     private ArrayList<ItemRVLeftMenu> genDataLeft() {
         ArrayList<ItemRVLeftMenu> listItem = new ArrayList<>();
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 7; i++){
             ItemRVLeftMenu item = new ItemRVLeftMenu();
             item.setIvItemToolbar(R.drawable.ic_btn_stackexchange);
             item.setTvItemToolbar("Title "+ (i+1));
@@ -99,7 +91,8 @@ public class FeedMainActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void itemClicked(int position) {
-        Intent intent = new Intent(this, SignUpActivity.class);
+        Intent intent = new Intent(this, FuntionActivity.class);
+        intent.putExtra("DATA", mLeftMenuRVAdapter.getData().get(position).getTvItemToolbar());
         startActivity(intent);
     }
 }

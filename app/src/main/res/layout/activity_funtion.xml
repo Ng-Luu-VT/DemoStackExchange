@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.FuntionActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <include layout="@layout/view_toolbar_question"
+            android:id="@+id/actFeedMain_tbMain"
+            >
+
+        </include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eff0f1"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="4"
+                >
+
+                <EditText
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:background="@drawable/search_edittext"
+                    android:hint="Search Questions..."
+                    android:drawableStart="@drawable/ic_search"
+
+                    >
+
+                </EditText>
+                <Spinner
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/actFuntion_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                </Spinner>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/actFuntion_rvItem">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="@color/cardview_light_background"
+        android:orientation="vertical"
+        >
+        <include layout="@layout/view_left_menu">
+
+        </include>
+
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
